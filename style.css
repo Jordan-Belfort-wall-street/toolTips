@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.note {
+    text-transform: uppercase;
+    font-family: helvetica;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#toolTip {
+    display: flex;
+    margin: 400px auto;
+    justify-content: space-evenly;
+}
+
+
+@font-face {
+    font-family: Roboto-Italic;
+    src: url("Fonts/Roboto-Italic.ttf")
+}
+
+
+.bmw, .lamborgini, .bugatti {
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 0 3px whitesmoke, 0 0 0 7px #77a6f7;
+
+}
+
+
+.bmw {
+    background-image: url("Images/bmw1.jpg");
+}
+
+.bmw:hover {
+    box-shadow: 0 0 0 4px whitesmoke, 0 0 0 8px dodgerblue;  
+}
+
+.lamborgini {
+    background-image: url("Images/Lamborghini_Evo.webp");
+}
+
+.lamborgini:hover {
+    box-shadow: 0 0 0 4px whitesmoke, 0 0 0 8px dodgerblue;  
+}
+
+.bugatti{
+    background-image: url("Images/Bugatti.jpg");
+    background-position: center bottom;
+}
+
+.bugatti:hover {
+    box-shadow: 0 0 0 4px whitesmoke, 0 0 0 8px dodgerblue;  
+}
+
+.info {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    left: -60%;
+    bottom: 200px;
+    visibility: hidden;
+    opacity: 0;
+    font-family: Roboto-Italic;
+    transition: .5s;
+}
+
+.bmw .info {
+    left: -20%;
+}
+
+.bugatti .info {
+    left: -130%;
+
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    font-family: cursive;
+}
+
+.header img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cars {
+    margin-left: 40px; 
+}
+
+.cars h3 {
+    color: #333;
+}
+
+.cars p {
+    color: #ccc;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.body p {
+    margin-top: 20px;
+    color: #333;
+
+}
+
+
+.bmw:hover .info{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-40px, 0)
+}
+
+
+.lamborgini:hover .info{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-40px, 0)
+}
+
+.bugatti:hover .info{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-40px, 0)
+}
